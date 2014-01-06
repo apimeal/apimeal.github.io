@@ -5,6 +5,7 @@ body {
 
 .diagram-container {
 	width: 100%;
+	min-width: 1170px;
 	border-radius: 5px;
 	border: 2px solid #ececec;
 	padding: 10px;
