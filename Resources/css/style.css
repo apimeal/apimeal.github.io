@@ -252,3 +252,33 @@ body {
 .example h4 {
 	margin: 15px 0 15px 0;
 }
+
+.explanation h4 {
+	margin: 25px 0 20px 0;
+}
+
+.name {
+	width: 200px;
+}
+
+.param {
+	width: 200px;
+}
+
+.desc {
+	width: 400px;
+}
+
+.exem {
+	width: 200px;
+}
+
+.hook-name {
+	color: #990000;
+	font-weight: bold;
+}
+
+.module-name {
+	color: #0000ff;
+	font-weight: bold;
+}

@@ -51,7 +51,162 @@
 
       <!-- MAIN CONTENT -->
     <div class="container">
-      
+      <div class="explanation">
+        <h2>L'explication</h2>
+        <p>
+          L'APImeal se divise en 5 grandes parties représentant les principales étapes réalisé par le serveur HTTP.<br />
+          Chaque partie est composée d'un module correspondant à l'action principale et de un ou deux point(s) d'encrage(s) (hook).<br />
+          Chaque hook sert à effectuer de potentiels actions de pré ou post traitement.
+        </p>
+        <h4>Connection</h4>
+        <p>Ce module permet de gérer la connection d'un client et de récupérer les requètes envoyées</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="name">Nom</th>
+              <th class="param">Paramètre(s)</th>
+              <th class="desc">Description</th>
+              <th class="exem">Exemple</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="hook-name">preConnection</td>
+              <td>IConnexion *, Error &</td>
+              <td>Appelé quand un client se connecte</td>
+              <td>Blacklist</td>
+            </tr>
+            <tr>
+              <td class="module-name">connection</td>
+              <td></td>
+              <td>Accepte la connexion d’un client</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="hook-name">postConnection</td>
+              <td>IConnexion *, Error &</td>
+              <td>Gestion SSL</td>
+              <td>SSL</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>ParseRequest</h4>
+        <p>Ce module permet de parser les requètes envoyées ainsi que de les décoder et d'effectuer les potentiels URL Rewriting</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="name">Nom</th>
+              <th class="param">Paramètre(s)</th>
+              <th class="desc">Description</th>
+              <th class="exem">Exemple</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="hook-name">preParseRequest</td>
+              <td>IHttpRequest *, Error &</td>
+              <td>Appelé pour décoder le charset</td>
+              <td>Decodage de la requète</td>
+            </tr>
+            <tr>
+              <td class="module-name">parseRequest</td>
+              <td></td>
+              <td>Parsing de la requête</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="hook-name">postParseRequest</td>
+              <td>IHttpRequest *, Error &</td>
+              <td>Appelé à la fin du parsing du header HTTP</td>
+              <td>URL Rewriting</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>GetContent</h4>
+        <p>Ce module permet de récupérer et reformater le contenu de la requète</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="name">Nom</th>
+              <th class="param">Paramètre(s)</th>
+              <th class="desc">Description</th>
+              <th class="exem">Exemple</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="module-name">getContent</td>
+              <td></td>
+              <td>Récuperation du contenue de la requête</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="hook-name">contentModule</td>
+              <td>IHttpRequest *, Error &</td>
+              <td>Permet de modifié le contenu de la requète</td>
+              <td>Proxy</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>GenerateResponse</h4>
+        <p>Ce module permet de générer le contenue de la réponse ainsi que de la formater</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="name">Nom</th>
+              <th class="param">Paramètre(s)</th>
+              <th class="desc">Description</th>
+              <th class="exem">Exemple</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="hook-name">CGIModule</td>
+              <td>IHttpRequest *, Error &</td>
+              <td>Gestion des CGI</td>
+              <td><a href="examples.html" title="Exemple CGI">Module CGI</a></td>
+            </tr>
+            <tr>
+              <td class="module-name">generateResponse</td>
+              <td></td>
+              <td>Génération du contenu de la réponse</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="hook-name">postGenerateResponse</td>
+              <td>IHttpRequest *, Error &</td>
+              <td>Appelé pour encoder le contenu de la réponse</td>
+              <td>Encodage de la réponse</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>SendResponse</h4>
+        <p>Ce module permet d'envoyer la reponse au client</p>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="name">Nom</th>
+              <th class="param">Paramètre(s)</th>
+              <th class="desc">Description</th>
+              <th class="exem">Exemple</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="hook-name">preSendRequest</td>
+              <td>IHttpRequest *, Error &</td>
+              <td>Gestion du SSL</td>
+              <td>SSL</td>
+            </tr>
+            <tr>
+              <td class="module-name">SendRequest</td>
+              <td></td>
+              <td>Envoi de la requête</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- FOOTER  -->
