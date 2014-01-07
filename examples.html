@@ -135,10 +135,11 @@ void CgiModule::CGIModule(apimeal::IHttpRequest *request, apimeal::Error &error)
 
         return;
 }
-
-extern "C" apimeal::AModule *LoadModule() {
-                return new CgiModule();
-        }
+<span class="important">
+  extern "C" DLLAPIMEAL apimeal::AModule *LoadModule(apimeal::ILogger *log) {
+                return new CgiModule(log);
+}
+</span>
 </code></pre>
       </div>
     </div>
