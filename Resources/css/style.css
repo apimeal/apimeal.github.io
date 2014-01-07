@@ -164,7 +164,31 @@ body {
 	transition: background 1s;
 	-webkit-transition: background 1s;
 }
-
+.expendable1:hover {
+	background: #5190A2;
+	transition: background 1s;
+	-webkit-transition: background 1s;
+}
+.expendable2:hover {
+	background: #5190A2;
+	transition: background 1s;
+	-webkit-transition: background 1s;
+}
+.expendable3:hover {
+	background: #5190A2;
+	transition: background 1s;
+	-webkit-transition: background 1s;
+}
+.expendable4:hover {
+	background: #5190A2;
+	transition: background 1s;
+	-webkit-transition: background 1s;
+}
+.expendable5:hover {
+	background: #5190A2;
+	transition: background 1s;
+	-webkit-transition: background 1s;
+}
 #backone {
 	width: 100px;
 	height: 40px;
@@ -208,3 +232,8 @@ body {
 	-webkit-transition: background 1s;
 }
 
+#backtwo:hover {
+	background: #5190A2;
+	transition: background 1s;
+	-webkit-transition: background 1s;
+}

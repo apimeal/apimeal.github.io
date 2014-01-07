@@ -58,7 +58,7 @@
 	$(".diagram-container").on("click", ".expendable3",
 		function() {
 			$(".diagram-container").fadeOut( "fast", function() {
-				$(".diagram-container").html('<div class="diagram"><div class="line sub-first2" style="width:80px;"></div><div class="choice"><div class="rect hook ">PreSendResponse<br />(exemple: SSL)</div><div class="or" s>OU</div><div class="rect">SendResponse</div></div><div class="line" style="width:80px;"></div></div><div id="backtwo" class="backtwo">Retour</div>');
+				$(".diagram-container").html('<div class="diagram"><div class="line sub-first2" style="width:80px;"></div><div class="choice"><div class="rect hook ">contentModule<br />(exemple: Proxy)</div><div class="or" s>OU</div><div class="rect">getContent</div></div><div class="line" style="width:80px;"></div></div><div id="backtwo" class="backtwo">Retour</div>');
 				$(".diagram").css({
 					width: "none",
 					margin: "none"
