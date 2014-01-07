@@ -1,0 +1,281 @@
+\hypertarget{classapimeal_1_1AModule}{\section{apimeal\-:\-:A\-Module Class Reference}
+\label{classapimeal_1_1AModule}\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}}
+}
+
+
+class which represent the module  
+
+
+
+
+{\ttfamily \#include $<$A\-Module.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapimeal_1_1AModule_af499c09d8c815150cd4ab48947e7325c}{A\-Module} (\hyperlink{classapimeal_1_1ILogger}{I\-Logger} $\ast$log)
+\begin{DoxyCompactList}\small\item\em Constructor Constructor of class \hyperlink{classapimeal_1_1AModule}{A\-Module}. \end{DoxyCompactList}\item 
+\hypertarget{classapimeal_1_1AModule_adab8d8b39d08162ba4c9bf9e609f243b}{virtual \hyperlink{classapimeal_1_1AModule_adab8d8b39d08162ba4c9bf9e609f243b}{$\sim$\-A\-Module} ()}\label{classapimeal_1_1AModule_adab8d8b39d08162ba4c9bf9e609f243b}
+
+\begin{DoxyCompactList}\small\item\em Destructor Destructor of class \hyperlink{classapimeal_1_1AModule}{A\-Module}. \end{DoxyCompactList}\item 
+virtual std\-::map$<$ e\-Type\-Module, \\*
+e\-Priority $>$ \hyperlink{classapimeal_1_1AModule_a86c37e1e56fa8b44d86e446630a731cb}{get\-Priority} () const =0
+\begin{DoxyCompactList}\small\item\em Get map of module's priority. \end{DoxyCompactList}\item 
+virtual \hyperlink{structapimeal_1_1Version}{Version} const \& \hyperlink{classapimeal_1_1AModule_a7567906eea190833d73f77f1da848b69}{get\-Version} () const =0
+\begin{DoxyCompactList}\small\item\em Get version of the module. \end{DoxyCompactList}\item 
+virtual std\-::string const \& \hyperlink{classapimeal_1_1AModule_ace61580f63d9c256df7659f23c471afc}{get\-Name} () const =0
+\begin{DoxyCompactList}\small\item\em Get name of module. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1AModule_a5a6614e5e72edb9c5df2b92e1ece869a}{pre\-Connexion} (\hyperlink{classapimeal_1_1IConnexion}{I\-Connexion} $\ast$, \hyperlink{structapimeal_1_1Error}{Error} \&)
+\begin{DoxyCompactList}\small\item\em Before connexion. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1AModule_aca21d0bfefef5455fcd6dd6f907fe283}{post\-Connexion} (\hyperlink{classapimeal_1_1IConnexion}{I\-Connexion} $\ast$, \hyperlink{structapimeal_1_1Error}{Error} \&)
+\begin{DoxyCompactList}\small\item\em After connexion. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1AModule_afdc72a0d20e2e8d7c6bc738413981acc}{pre\-Parse\-Request} (\hyperlink{classapimeal_1_1IHttpRequest}{I\-Http\-Request} $\ast$, \hyperlink{structapimeal_1_1Error}{Error} \&)
+\begin{DoxyCompactList}\small\item\em Before parsing a query. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1AModule_a2826a882eda9e5e7b5b6ca6b1051a479}{post\-Parse\-Request} (\hyperlink{classapimeal_1_1IHttpRequest}{I\-Http\-Request} $\ast$, \hyperlink{structapimeal_1_1Error}{Error} \&)
+\begin{DoxyCompactList}\small\item\em After parsing a request. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1AModule_a01660e7d5ed59a20e9a81e03958a9911}{content\-Module} (\hyperlink{classapimeal_1_1IHttpRequest}{I\-Http\-Request} $\ast$, \hyperlink{structapimeal_1_1Error}{Error} \&)
+\begin{DoxyCompactList}\small\item\em Get body of the request. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1AModule_a2f80e5e88df077200e42f70c79083819}{C\-G\-I\-Module} (\hyperlink{classapimeal_1_1IHttpRequest}{I\-Http\-Request} $\ast$, \hyperlink{structapimeal_1_1Error}{Error} \&)
+\begin{DoxyCompactList}\small\item\em Manage of Common Gateway Interface. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1AModule_ab245f944a40f67dddb5777864677468d}{post\-Generate\-Response} (\hyperlink{classapimeal_1_1IHttpResponse}{I\-Http\-Response} $\ast$, \hyperlink{structapimeal_1_1Error}{Error} \&)
+\begin{DoxyCompactList}\small\item\em After generation of the response. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1AModule_a07990bc98a4b3a90ecbc328b588af66f}{pre\-Send\-Request} (\hyperlink{classapimeal_1_1IHttpResponse}{I\-Http\-Response} $\ast$, \hyperlink{structapimeal_1_1Error}{Error} \&)
+\begin{DoxyCompactList}\small\item\em Before sending the response. \end{DoxyCompactList}\item 
+\hypertarget{classapimeal_1_1AModule_adc7136919b05fbde2f0f3b4d3d1bc844}{virtual void \hyperlink{classapimeal_1_1AModule_adc7136919b05fbde2f0f3b4d3d1bc844}{release} ()}\label{classapimeal_1_1AModule_adc7136919b05fbde2f0f3b4d3d1bc844}
+
+\begin{DoxyCompactList}\small\item\em Free memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapimeal_1_1ILogger}{I\-Logger} $\ast$ \hyperlink{classapimeal_1_1AModule_a2c29f9418997cf7e82715bc09c8dcca2}{\-\_\-logger}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class which represent the module 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapimeal_1_1AModule_af499c09d8c815150cd4ab48947e7325c}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!A\-Module@{A\-Module}}
+\index{A\-Module@{A\-Module}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{A\-Module}]{\setlength{\rightskip}{0pt plus 5cm}apimeal\-::\-A\-Module\-::\-A\-Module (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Logger} $\ast$}]{log}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapimeal_1_1AModule_af499c09d8c815150cd4ab48947e7325c}
+
+
+Constructor Constructor of class \hyperlink{classapimeal_1_1AModule}{A\-Module}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log} & \-: Logger link with the module \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapimeal_1_1AModule_a2f80e5e88df077200e42f70c79083819}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!C\-G\-I\-Module@{C\-G\-I\-Module}}
+\index{C\-G\-I\-Module@{C\-G\-I\-Module}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{C\-G\-I\-Module}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-A\-Module\-::\-C\-G\-I\-Module (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Http\-Request} $\ast$}]{, }
+\item[{{\bf Error} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapimeal_1_1AModule_a2f80e5e88df077200e42f70c79083819}
+
+
+Manage of Common Gateway Interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classapimeal_1_1IHttpRequest}{I\-Http\-Request}} & \-: Class for manage a query \\
+\hline
+{\em \hyperlink{structapimeal_1_1Error}{Error}} & \-: Class for manage an error \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1AModule_a01660e7d5ed59a20e9a81e03958a9911}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!content\-Module@{content\-Module}}
+\index{content\-Module@{content\-Module}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{content\-Module}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-A\-Module\-::content\-Module (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Http\-Request} $\ast$}]{, }
+\item[{{\bf Error} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapimeal_1_1AModule_a01660e7d5ed59a20e9a81e03958a9911}
+
+
+Get body of the request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classapimeal_1_1IHttpRequest}{I\-Http\-Request}} & \-: Class for manage a query \\
+\hline
+{\em \hyperlink{structapimeal_1_1Error}{Error}} & \-: Class for manage an error \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1AModule_ace61580f63d9c256df7659f23c471afc}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string const\& apimeal\-::\-A\-Module\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1AModule_ace61580f63d9c256df7659f23c471afc}
+
+
+Get name of module. 
+
+\begin{DoxyReturn}{Returns}
+String with the module's name 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1AModule_a86c37e1e56fa8b44d86e446630a731cb}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!get\-Priority@{get\-Priority}}
+\index{get\-Priority@{get\-Priority}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{get\-Priority}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::map$<$e\-Type\-Module, e\-Priority$>$ apimeal\-::\-A\-Module\-::get\-Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1AModule_a86c37e1e56fa8b44d86e446630a731cb}
+
+
+Get map of module's priority. 
+
+\begin{DoxyReturn}{Returns}
+Map of priority of module 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1AModule_a7567906eea190833d73f77f1da848b69}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!get\-Version@{get\-Version}}
+\index{get\-Version@{get\-Version}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{get\-Version}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Version} const\& apimeal\-::\-A\-Module\-::get\-Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1AModule_a7567906eea190833d73f77f1da848b69}
+
+
+Get version of the module. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structapimeal_1_1Version}{Version} of the module 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1AModule_aca21d0bfefef5455fcd6dd6f907fe283}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!post\-Connexion@{post\-Connexion}}
+\index{post\-Connexion@{post\-Connexion}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{post\-Connexion}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-A\-Module\-::post\-Connexion (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Connexion} $\ast$}]{, }
+\item[{{\bf Error} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapimeal_1_1AModule_aca21d0bfefef5455fcd6dd6f907fe283}
+
+
+After connexion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classapimeal_1_1IConnexion}{I\-Connexion}} & \-: Class for connecting a client \\
+\hline
+{\em \hyperlink{structapimeal_1_1Error}{Error}} & \-: Class for manage an error \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1AModule_ab245f944a40f67dddb5777864677468d}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!post\-Generate\-Response@{post\-Generate\-Response}}
+\index{post\-Generate\-Response@{post\-Generate\-Response}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{post\-Generate\-Response}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-A\-Module\-::post\-Generate\-Response (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Http\-Response} $\ast$}]{, }
+\item[{{\bf Error} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapimeal_1_1AModule_ab245f944a40f67dddb5777864677468d}
+
+
+After generation of the response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classapimeal_1_1IHttpResponse}{I\-Http\-Response}} & \-: Class with the query response \\
+\hline
+{\em \hyperlink{structapimeal_1_1Error}{Error}} & \-: Class for manage an error \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1AModule_a2826a882eda9e5e7b5b6ca6b1051a479}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!post\-Parse\-Request@{post\-Parse\-Request}}
+\index{post\-Parse\-Request@{post\-Parse\-Request}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{post\-Parse\-Request}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-A\-Module\-::post\-Parse\-Request (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Http\-Request} $\ast$}]{, }
+\item[{{\bf Error} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapimeal_1_1AModule_a2826a882eda9e5e7b5b6ca6b1051a479}
+
+
+After parsing a request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classapimeal_1_1IHttpRequest}{I\-Http\-Request}} & \-: Class for manage a query \\
+\hline
+{\em \hyperlink{structapimeal_1_1Error}{Error}} & \-: Class for manage an error \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1AModule_a5a6614e5e72edb9c5df2b92e1ece869a}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!pre\-Connexion@{pre\-Connexion}}
+\index{pre\-Connexion@{pre\-Connexion}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{pre\-Connexion}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-A\-Module\-::pre\-Connexion (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Connexion} $\ast$}]{, }
+\item[{{\bf Error} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapimeal_1_1AModule_a5a6614e5e72edb9c5df2b92e1ece869a}
+
+
+Before connexion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classapimeal_1_1IConnexion}{I\-Connexion}} & \-: Class for connecting a client \\
+\hline
+{\em \hyperlink{structapimeal_1_1Error}{Error}} & \-: Class for manage an error \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1AModule_afdc72a0d20e2e8d7c6bc738413981acc}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!pre\-Parse\-Request@{pre\-Parse\-Request}}
+\index{pre\-Parse\-Request@{pre\-Parse\-Request}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{pre\-Parse\-Request}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-A\-Module\-::pre\-Parse\-Request (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Http\-Request} $\ast$}]{, }
+\item[{{\bf Error} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapimeal_1_1AModule_afdc72a0d20e2e8d7c6bc738413981acc}
+
+
+Before parsing a query. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classapimeal_1_1IHttpRequest}{I\-Http\-Request}} & \-: Class for manage a query \\
+\hline
+{\em \hyperlink{structapimeal_1_1Error}{Error}} & \-: Class for manage an error \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1AModule_a07990bc98a4b3a90ecbc328b588af66f}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!pre\-Send\-Request@{pre\-Send\-Request}}
+\index{pre\-Send\-Request@{pre\-Send\-Request}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{pre\-Send\-Request}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-A\-Module\-::pre\-Send\-Request (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Http\-Response} $\ast$}]{, }
+\item[{{\bf Error} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapimeal_1_1AModule_a07990bc98a4b3a90ecbc328b588af66f}
+
+
+Before sending the response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classapimeal_1_1IHttpResponse}{I\-Http\-Response}} & \-: Class with the query response \\
+\hline
+{\em \hyperlink{structapimeal_1_1Error}{Error}} & \-: Class for manage an error \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapimeal_1_1AModule_a2c29f9418997cf7e82715bc09c8dcca2}{\index{apimeal\-::\-A\-Module@{apimeal\-::\-A\-Module}!\-\_\-logger@{\-\_\-logger}}
+\index{\-\_\-logger@{\-\_\-logger}!apimeal::AModule@{apimeal\-::\-A\-Module}}
+\subsubsection[{\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-Logger}$\ast$ apimeal\-::\-A\-Module\-::\-\_\-logger\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapimeal_1_1AModule_a2c29f9418997cf7e82715bc09c8dcca2}
+Logger 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/corpille/\-Documents/\-Zia/apimeal/include/apimeal/A\-Module.\-hpp\end{DoxyCompactItemize}

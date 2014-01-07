@@ -1,0 +1,114 @@
+\hypertarget{classapimeal_1_1IConnexion}{\section{apimeal\-:\-:I\-Connexion Class Reference}
+\label{classapimeal_1_1IConnexion}\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}}
+}
+
+
+Class for connecting a client.  
+
+
+
+
+{\ttfamily \#include $<$I\-Connexion.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classapimeal_1_1IConnexion_afa1d85aeadc451143eef2837d5ea4939}{virtual \hyperlink{classapimeal_1_1IConnexion_afa1d85aeadc451143eef2837d5ea4939}{$\sim$\-I\-Connexion} ()}\label{classapimeal_1_1IConnexion_afa1d85aeadc451143eef2837d5ea4939}
+
+\begin{DoxyCompactList}\small\item\em Destructor virtuel. \end{DoxyCompactList}\item 
+virtual std\-::string const \& \hyperlink{classapimeal_1_1IConnexion_a8ab3c43f9e1356ed9d46a30ff86ee093}{get\-Hostname} () const =0
+\begin{DoxyCompactList}\small\item\em get\-Hostname \end{DoxyCompactList}\item 
+virtual std\-::string const \& \hyperlink{classapimeal_1_1IConnexion_a6504bb6018c8ddb8cf367384a0b7b178}{get\-Ip} () const =0
+\begin{DoxyCompactList}\small\item\em get\-Ip \end{DoxyCompactList}\item 
+virtual int \hyperlink{classapimeal_1_1IConnexion_a405c77b84198d491f20e79a0fcb4d133}{get\-Port} () const =0
+\begin{DoxyCompactList}\small\item\em get\-Port \end{DoxyCompactList}\item 
+virtual std\-::string const \& \hyperlink{classapimeal_1_1IConnexion_ae1a0352ab450dea6afd278385747f750}{get\-Request} () const =0
+\begin{DoxyCompactList}\small\item\em get the Request \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1IConnexion_aba7b8303d379e629b59f49621fd6b704}{set\-Request} (std\-::string const \&request)=0
+\begin{DoxyCompactList}\small\item\em set the Request \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for connecting a client. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classapimeal_1_1IConnexion_a8ab3c43f9e1356ed9d46a30ff86ee093}{\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}!get\-Hostname@{get\-Hostname}}
+\index{get\-Hostname@{get\-Hostname}!apimeal::IConnexion@{apimeal\-::\-I\-Connexion}}
+\subsubsection[{get\-Hostname}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string const\& apimeal\-::\-I\-Connexion\-::get\-Hostname (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IConnexion_a8ab3c43f9e1356ed9d46a30ff86ee093}
+
+
+get\-Hostname 
+
+\begin{DoxyReturn}{Returns}
+std\-::string const \& \-: Hostname client 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1IConnexion_a6504bb6018c8ddb8cf367384a0b7b178}{\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}!get\-Ip@{get\-Ip}}
+\index{get\-Ip@{get\-Ip}!apimeal::IConnexion@{apimeal\-::\-I\-Connexion}}
+\subsubsection[{get\-Ip}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string const\& apimeal\-::\-I\-Connexion\-::get\-Ip (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IConnexion_a6504bb6018c8ddb8cf367384a0b7b178}
+
+
+get\-Ip 
+
+\begin{DoxyReturn}{Returns}
+std\-::string const \& \-: Ip client ex (192.\-168.\-0.\-1) 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1IConnexion_a405c77b84198d491f20e79a0fcb4d133}{\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}!get\-Port@{get\-Port}}
+\index{get\-Port@{get\-Port}!apimeal::IConnexion@{apimeal\-::\-I\-Connexion}}
+\subsubsection[{get\-Port}]{\setlength{\rightskip}{0pt plus 5cm}virtual int apimeal\-::\-I\-Connexion\-::get\-Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IConnexion_a405c77b84198d491f20e79a0fcb4d133}
+
+
+get\-Port 
+
+\begin{DoxyReturn}{Returns}
+int \-: Port client 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1IConnexion_ae1a0352ab450dea6afd278385747f750}{\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}!get\-Request@{get\-Request}}
+\index{get\-Request@{get\-Request}!apimeal::IConnexion@{apimeal\-::\-I\-Connexion}}
+\subsubsection[{get\-Request}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string const\& apimeal\-::\-I\-Connexion\-::get\-Request (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IConnexion_ae1a0352ab450dea6afd278385747f750}
+
+
+get the Request 
+
+\begin{DoxyReturn}{Returns}
+std\-::string const \& \-: Request client 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1IConnexion_aba7b8303d379e629b59f49621fd6b704}{\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}!set\-Request@{set\-Request}}
+\index{set\-Request@{set\-Request}!apimeal::IConnexion@{apimeal\-::\-I\-Connexion}}
+\subsubsection[{set\-Request}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-I\-Connexion\-::set\-Request (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{request}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IConnexion_aba7b8303d379e629b59f49621fd6b704}
+
+
+set the Request 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\-::string} & const \& request \-: The request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/corpille/\-Documents/\-Zia/apimeal/include/apimeal/I\-Connexion.\-hpp\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\hypertarget{classapimeal_1_1IRequest}{\section{apimeal\-:\-:I\-Request Class Reference}
+\label{classapimeal_1_1IRequest}\index{apimeal\-::\-I\-Request@{apimeal\-::\-I\-Request}}
+}
+
+
+content of a query  
+
+
+
+
+{\ttfamily \#include $<$I\-Request.\-hpp$>$}
+
+Inheritance diagram for apimeal\-:\-:I\-Request\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapimeal_1_1IRequest}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classapimeal_1_1IRequest_a200a902019f7ef0272866d29a00feed6}{virtual \hyperlink{classapimeal_1_1IRequest_a200a902019f7ef0272866d29a00feed6}{$\sim$\-I\-Request} ()}\label{classapimeal_1_1IRequest_a200a902019f7ef0272866d29a00feed6}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1IRequest_a91098a447ab3b6cc035dd4fd789e5ae6}{set\-Body} (std\-::string const \&)=0
+\begin{DoxyCompactList}\small\item\em set\-Body \-: set the body \end{DoxyCompactList}\item 
+virtual std\-::string const \& \hyperlink{classapimeal_1_1IRequest_ae960126642019a346b99b25401d8227a}{get\-Body} () const =0
+\begin{DoxyCompactList}\small\item\em get\-Body \-: get the body \end{DoxyCompactList}\item 
+virtual std\-::map$<$ std\-::string, \\*
+std\-::string $>$ const \& \hyperlink{classapimeal_1_1IRequest_ae1570e7bce31e01b19a44d2b1552ee1a}{get\-Headers} () const =0
+\begin{DoxyCompactList}\small\item\em get\-Headers \-: get the headers \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1IRequest_a6561e8a6ec011ac8e23ec2e9a2007ee5}{add\-Header} (std\-::string const \&key, std\-::string const \&value)=0
+\begin{DoxyCompactList}\small\item\em add\-Headers \-: adding a line in the header \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1IRequest_a6721f40bf978b65fe16c391be6de5ee6}{set\-Headers} (std\-::map$<$ std\-::string, std\-::string $>$ const \&headers)=0
+\begin{DoxyCompactList}\small\item\em set\-Headers \-: set the header \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1IRequest_aa2e8c5d8e3ea03dfd9d4a85fa36ad25b}{remove\-Header} (std\-::string const \&key)=0
+\begin{DoxyCompactList}\small\item\em remove\-Header \-: removing a line in the header \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+content of a query 
+
+\subsection{Member Function Documentation}
+\hypertarget{classapimeal_1_1IRequest_a6561e8a6ec011ac8e23ec2e9a2007ee5}{\index{apimeal\-::\-I\-Request@{apimeal\-::\-I\-Request}!add\-Header@{add\-Header}}
+\index{add\-Header@{add\-Header}!apimeal::IRequest@{apimeal\-::\-I\-Request}}
+\subsubsection[{add\-Header}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-I\-Request\-::add\-Header (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{key, }
+\item[{std\-::string const \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IRequest_a6561e8a6ec011ac8e23ec2e9a2007ee5}
+
+
+add\-Headers \-: adding a line in the header 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\-::string} & const\& key \\
+\hline
+{\em std\-::string} & const\& value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1IRequest_ae960126642019a346b99b25401d8227a}{\index{apimeal\-::\-I\-Request@{apimeal\-::\-I\-Request}!get\-Body@{get\-Body}}
+\index{get\-Body@{get\-Body}!apimeal::IRequest@{apimeal\-::\-I\-Request}}
+\subsubsection[{get\-Body}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string const\& apimeal\-::\-I\-Request\-::get\-Body (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IRequest_ae960126642019a346b99b25401d8227a}
+
+
+get\-Body \-: get the body 
+
+\begin{DoxyReturn}{Returns}
+std\-::string const \& body 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1IRequest_ae1570e7bce31e01b19a44d2b1552ee1a}{\index{apimeal\-::\-I\-Request@{apimeal\-::\-I\-Request}!get\-Headers@{get\-Headers}}
+\index{get\-Headers@{get\-Headers}!apimeal::IRequest@{apimeal\-::\-I\-Request}}
+\subsubsection[{get\-Headers}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::map$<$std\-::string, std\-::string$>$ const\& apimeal\-::\-I\-Request\-::get\-Headers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IRequest_ae1570e7bce31e01b19a44d2b1552ee1a}
+
+
+get\-Headers \-: get the headers 
+
+\begin{DoxyReturn}{Returns}
+std\-::map$<$std\-::string, std\-::string$>$ const \& header \-: example (key \-: \char`\"{}\-User-\/\-Agent\char`\"{} val \-: \char`\"{}curl\char`\"{}) 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1IRequest_aa2e8c5d8e3ea03dfd9d4a85fa36ad25b}{\index{apimeal\-::\-I\-Request@{apimeal\-::\-I\-Request}!remove\-Header@{remove\-Header}}
+\index{remove\-Header@{remove\-Header}!apimeal::IRequest@{apimeal\-::\-I\-Request}}
+\subsubsection[{remove\-Header}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-I\-Request\-::remove\-Header (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IRequest_aa2e8c5d8e3ea03dfd9d4a85fa36ad25b}
+
+
+remove\-Header \-: removing a line in the header 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\-::string} & const \&key \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1IRequest_a91098a447ab3b6cc035dd4fd789e5ae6}{\index{apimeal\-::\-I\-Request@{apimeal\-::\-I\-Request}!set\-Body@{set\-Body}}
+\index{set\-Body@{set\-Body}!apimeal::IRequest@{apimeal\-::\-I\-Request}}
+\subsubsection[{set\-Body}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-I\-Request\-::set\-Body (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IRequest_a91098a447ab3b6cc035dd4fd789e5ae6}
+
+
+set\-Body \-: set the body 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\-::string} & const \& body \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapimeal_1_1IRequest_a6721f40bf978b65fe16c391be6de5ee6}{\index{apimeal\-::\-I\-Request@{apimeal\-::\-I\-Request}!set\-Headers@{set\-Headers}}
+\index{set\-Headers@{set\-Headers}!apimeal::IRequest@{apimeal\-::\-I\-Request}}
+\subsubsection[{set\-Headers}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-I\-Request\-::set\-Headers (
+\begin{DoxyParamCaption}
+\item[{std\-::map$<$ std\-::string, std\-::string $>$ const \&}]{headers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IRequest_a6721f40bf978b65fe16c391be6de5ee6}
+
+
+set\-Headers \-: set the header 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\-::map$<$std\-::string,std\-::string$>$} & const \& header \-: example (key \-: \char`\"{}\-User-\/\-Agent\char`\"{} val \-: \char`\"{}curl\char`\"{}) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/corpille/\-Documents/\-Zia/apimeal/include/apimeal/I\-Request.\-hpp\end{DoxyCompactItemize}
