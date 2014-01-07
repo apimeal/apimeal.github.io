@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="APImeal : L'API qui vous simplifie la vie" />
+    <title>APImeal : L'API qui vous simplifie la vie</title>
+    <link href="Resources/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="Resources/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <link href="Resources/css/style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("API meal Zia epitech coutur_n seguin_s devaux_a aubine_v lacroi_t pillet_c nantes ");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+    <script src="Resources/js/jquery-1.10.2.min.js"></script>
+    <script src="Resources/js/bootstrap.min.js"></script>
+    <script src="Resources/js/script.js"></script>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">APImeal</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="explanation.html">L'explication</a></li>
+            <li class="active"><a href="examples.html">Exemples</a></li>
+            <li><a target="_blank" href="https://github.com/apimeal/apimeal">Le projet sur GitHub</a></li>
+            <li><a href="#">Doxygen</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+      <!-- MAIN CONTENT -->
+    <div class="container">
+      <h3>Exemple d'intégration de l'API pour un module</h3>
+      <div class="example">
+        <h4>CgiModules.hpp</h4>
+        <pre><code type="cpp">#ifndef APIMEALEXAMPLE_CGIMODULE_HPP
+#define APIMEALEXAMPLE_CGIMODULE_HPP
+
+#include "apimeal/AModule.hpp"
+
+class CgiModule : public apimeal::AModule {
+public:
+        CgiModule();
+
+        std::map<apimeal::eTypeModule, apimeal::ePriority> getPriority() const;
+        apimeal::Version const &getVersion() const;
+        std::string const &getName() const;
+
+        void CGIModule(apimeal::IHttpRequest *, apimeal::Error &);
+private:
+        apimeal::Version _version;
+        std::string _name;
+
+};
+
+#endif</code></pre>
+<h4>CgiModules.cpp</h4>
+        <pre><code  type="cpp">#include "CgiModule.hpp"
+
+CgiModule::CgiModule(apimeal::ILogger *log)
+ : AModule(log), _version(0,1), _name("CgiModule")
+{
+
+}
+
+std::map CgiModule::getPriority() const {
+        // création d'une map qui contiendra
+        // notre point d'insertion pour l'api
+        
+        std::map map;
+        // on ajoute dans notre liste le CGIMODULE pour pouvoir l'utiliser
+    // ainsi qu'une piorité de 0.42 pour notre module
+        map[apimeal::CGIMODULE] = 0.42f;
+        return map;
+}
+
+apimeal::Version const &CgiModule::getVersion() const {
+        return _version;
+}
+
+std::string const &CgiModule::getName() const {
+        return _name;
+}
+
+void CgiModule::CGIModule(apimeal::IHttpRequest *request, apimeal::Error &error) {
+
+        // On recupere le contenu de notre fichier qu'on va 
+        // envoyer a notre module CGI
+        std::string body = request->getBody();
+
+        std::string result;
+        // TODO: Le module CGI prends en charge le body
+        // est le renvoi transformé dans la variable result
+
+        // Si result == "" on concidère qu'il y'a une erreur 404
+        if (result == "") {
+                error.IsError = true;
+                error.Code = 404;
+                error.Message = "La page est vide donc introuvable à nos yeux";
+                return;
+        }
+
+
+        /** on set le nouveau body
+        * EXAMPLE de contenu de la variable result :
+        * X-Powered-By: PHP/5.5.3-1ubuntu2.1
+        * Cache-Control: no-cache, must-revalidate
+        * Content-type: text/html
+        *<div>&nbsp; &nbsp; &nbsp; &nbsp; * &lt;html&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp;&lt;head&gt;&lt;title&gt;APIMEAL&lt;/title&gt;&lt;/head&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp;&lt;body&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp; &nbsp; &nbsp; &lt;h1&gt;APIMEAL&lt;/h1&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;L'api qui vous simplifie la vie&lt;/h3&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; * &nbsp; &nbsp;&lt;/body&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; * &lt;/html&gt;</div>&nbsp; &nbsp; &nbsp; &nbsp; *
+        */
+        request->setBody(result);
+
+        // INFO : c'est le kernel du zia qui se charge de parser les headers
+
+        return;
+}
+
+extern "C" apimeal::AModule *LoadModule() {
+                return new CgiModule();
+        }
+</code></pre>
+      </div>
+    </div>
+
+    <!-- FOOTER  -->
+    <div class="container">
+      <hr />
+      <footer>
+        <p class="pull-right">
+          <iframe src="http://ghbtns.com/github-btn.html?user=apimeal&repo=apimeal&type=watch&size=large"
+            allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+          <iframe src="http://ghbtns.com/github-btn.html?user=apimeal&repo=apimeal&type=fork&size=large"
+            allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+        </p>
+        <div>
+          <a href="http://www.epitech.net" target="_blank"><img class="epitech" src="Resources/images/epitech.gif" alt="Epitech" /></a>
+          <div class="info">
+            <p>APImeal : L'API qui vous simplifie la vie<br />
+              Par : seguin_s, lacroi_t, pillet_c, devaux_a, aubine_v, coutur_n
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

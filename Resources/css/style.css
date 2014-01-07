@@ -3,6 +3,16 @@ body {
   padding-bottom: 30px;
 }
 
+.logo,
+.main-title {
+	display: inline-block;
+	margin-bottom: 15px;
+}
+.main-title {
+	margin-left: 20px;
+}
+
+
 .diagram-container {
 	width: 100%;
 	min-width: 1170px;
@@ -159,31 +169,11 @@ body {
 .middle {
 }
 
-.expendable:hover {
-	background: #5190A2;
-	transition: background 1s;
-	-webkit-transition: background 1s;
-}
-.expendable1:hover {
-	background: #5190A2;
-	transition: background 1s;
-	-webkit-transition: background 1s;
-}
-.expendable2:hover {
-	background: #5190A2;
-	transition: background 1s;
-	-webkit-transition: background 1s;
-}
-.expendable3:hover {
-	background: #5190A2;
-	transition: background 1s;
-	-webkit-transition: background 1s;
-}
-.expendable4:hover {
-	background: #5190A2;
-	transition: background 1s;
-	-webkit-transition: background 1s;
-}
+.expendable:hover ,
+.expendable1:hover,
+.expendable2:hover ,
+.expendable3:hover,
+.expendable4:hover,
 .expendable5:hover {
 	background: #5190A2;
 	transition: background 1s;
@@ -236,4 +226,29 @@ body {
 	background: #5190A2;
 	transition: background 1s;
 	-webkit-transition: background 1s;
+}
+
+.epitech {
+	width: 85px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.info {
+	margin-left: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+}
+
+.clone {
+	margin-top: 50px;
+}
+
+.example {
+	margin-top: 30px;
+}
+
+.example h4 {
+	margin: 15px 0 15px 0;
 }
