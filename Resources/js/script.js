@@ -1,7 +1,7 @@
  $(function () {
 	$(".diagram-container").on("click", ".expendable", function() {
 		$(".diagram-container").fadeOut( "fast", function() {
-			$(".diagram-container").html('<div class="diagram"><div class="line" style="width:100px;"></div><div class="rect sub expendable1">Connection</div><div class="line" style="width:100px;"></div><div class="rect sub expendable2">ParseRequest</div><div class="angle-line" style="width:70px;"></div><div class="middle"><div class="line top" style="width:70px;"></div><div class="rect right sub expendable3">GetContent</div></div><div class="line left" style="width:100px;"></div><div class="rect sub expendable5">GenerateResponse</div><div class="line left" style="width:100px;"></div><div class="rect sub expendable4">SendResponse</div><div class="angle-line-down" style="width:60px;"></div></div><div id="backone" class="backone">Retour</div>');
+			$(".diagram-container").html('<div class="diagram"><div class="line" style="width:100px;"></div><div class="rect sub expendable1">Connection</div><div class="line" style="width:100px;"></div><div class="rect sub expendable2">ParseRequest</div><div class="angle-line" style="width:70px;"></div><div class="middle"><div class="line top" style="width:70px;"></div><div class="rect right sub expendable3">GetContent</div></div><div class="line left" style="width:100px;"></div><div class="rect sub expendable5">SendResponse</div><div class="line left" style="width:100px;"></div><div class="rect sub expendable4">GenerateResponse</div><div class="angle-line-down" style="width:60px;"></div></div><div id="backone" class="backone">Retour</div>');
 			$(".diagram").css({
 				width: "770px",
 				margin: "50px auto 25px auto"
@@ -23,7 +23,7 @@
 	);
 	$(".diagram-container").on("click", ".backtwo", function() {
 		$(".diagram-container").fadeOut( "fast", function() {
-			$(".diagram-container").html('<div class="diagram"><div class="line" style="width:100px;"></div><div class="rect sub expendable1">Connection</div><div class="line" style="width:100px;"></div><div class="rect sub expendable2">ParseRequest</div><div class="angle-line" style="width:70px;"></div><div class="middle"><div class="line top" style="width:70px;"></div><div class="rect right sub expendable3">GetContent</div></div><div class="line left" style="width:100px;"></div><div class="rect sub expendable5">GenerateResponse</div><div class="line left" style="width:100px;"></div><div class="rect sub expendable4">SendResponse</div><div class="angle-line-down" style="width:60px;"></div></div><div id="backone" class="backone">Retour</div></div>');
+			$(".diagram-container").html('<div class="diagram"><div class="line" style="width:100px;"></div><div class="rect sub expendable1">Connection</div><div class="line" style="width:100px;"></div><div class="rect sub expendable2">ParseRequest</div><div class="angle-line" style="width:70px;"></div><div class="middle"><div class="line top" style="width:70px;"></div><div class="rect right sub expendable3">GetContent</div></div><div class="line left" style="width:100px;"></div><div class="rect sub expendable5">SendResponse</div><div class="line left" style="width:100px;"></div><div class="rect sub expendable4">GenerateResponse</div><div class="angle-line-down" style="width:60px;"></div></div><div id="backone" class="backone">Retour</div></div>');
 			$(".diagram").css({
 				width: "770px",
 				margin: "50px auto 25px auto"
