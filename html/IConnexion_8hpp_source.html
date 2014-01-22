@@ -93,25 +93,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>apimeal {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="classapimeal_1_1IConnexion.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapimeal_1_1IConnexion.html" title="Class for connecting a client. ">IConnexion</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classapimeal_1_1IConnexion.html#afa1d85aeadc451143eef2837d5ea4939">   17</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classapimeal_1_1IConnexion.html#afa1d85aeadc451143eef2837d5ea4939" title="Destructor virtuel. ">~IConnexion</a>() {}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> std::string <span class="keyword">const</span> &amp;<a class="code" href="classapimeal_1_1IConnexion.html#a8ab3c43f9e1356ed9d46a30ff86ee093" title="getHostname ">getHostname</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> std::string <span class="keyword">const</span> &amp;<a class="code" href="classapimeal_1_1IConnexion.html#a6504bb6018c8ddb8cf367384a0b7b178" title="getIp ">getIp</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classapimeal_1_1IConnexion.html#a405c77b84198d491f20e79a0fcb4d133" title="getPort ">getPort</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> std::string <span class="keyword">const</span> &amp;<a class="code" href="classapimeal_1_1IConnexion.html#ae1a0352ab450dea6afd278385747f750" title="get the Request ">getRequest</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classapimeal_1_1IConnexion.html#aba7b8303d379e629b59f49621fd6b704" title="set the Request ">setRequest</a>(std::string <span class="keyword">const</span> &amp;request) = 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifdef WIN32 </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;winsock2.h&gt;</span> </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#elif defined (linux) </span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keywordtype">int</span> SOCKET;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#error not defined for this platform</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>apimeal {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classapimeal_1_1IConnexion.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classapimeal_1_1IConnexion.html" title="Class for connecting a client. ">IConnexion</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classapimeal_1_1IConnexion.html#afa1d85aeadc451143eef2837d5ea4939">   26</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classapimeal_1_1IConnexion.html#afa1d85aeadc451143eef2837d5ea4939" title="Destructor virtuel. ">~IConnexion</a>() {}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> std::string <span class="keyword">const</span> &amp;<a class="code" href="classapimeal_1_1IConnexion.html#a8ab3c43f9e1356ed9d46a30ff86ee093" title="getHostname ">getHostname</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> std::string <span class="keyword">const</span> &amp;<a class="code" href="classapimeal_1_1IConnexion.html#a6504bb6018c8ddb8cf367384a0b7b178" title="getIp ">getIp</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classapimeal_1_1IConnexion.html#a405c77b84198d491f20e79a0fcb4d133" title="getPort ">getPort</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> std::string <span class="keyword">const</span> &amp;<a class="code" href="classapimeal_1_1IConnexion.html#ae1a0352ab450dea6afd278385747f750" title="get the Request ">getRequest</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classapimeal_1_1IConnexion.html#aba7b8303d379e629b59f49621fd6b704" title="set the Request ">setRequest</a>(std::string <span class="keyword">const</span> &amp;request) = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classapimeal_1_1IConnexion.html#a795ffdde9790a370c59898549265129e" title="set the socket ">setSocket</a>(SOCKET) = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> SOCKET <a class="code" href="classapimeal_1_1IConnexion.html#a219c70ab218a9b3449557238a50e00b8" title="get the socket ">getSocket</a>() = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 22 2014 12:08:56 for APImeal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 22 2014 12:16:41 for APImeal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

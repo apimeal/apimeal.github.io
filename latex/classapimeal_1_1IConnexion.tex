@@ -25,7 +25,11 @@ virtual int \hyperlink{classapimeal_1_1IConnexion_a405c77b84198d491f20e79a0fcb4d
 virtual std\-::string const \& \hyperlink{classapimeal_1_1IConnexion_ae1a0352ab450dea6afd278385747f750}{get\-Request} () const =0
 \begin{DoxyCompactList}\small\item\em get the Request \end{DoxyCompactList}\item 
 virtual void \hyperlink{classapimeal_1_1IConnexion_aba7b8303d379e629b59f49621fd6b704}{set\-Request} (std\-::string const \&request)=0
-\begin{DoxyCompactList}\small\item\em set the Request \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em set the Request \end{DoxyCompactList}\item 
+virtual void \hyperlink{classapimeal_1_1IConnexion_a795ffdde9790a370c59898549265129e}{set\-Socket} (S\-O\-C\-K\-E\-T)=0
+\begin{DoxyCompactList}\small\item\em set the socket \end{DoxyCompactList}\item 
+virtual S\-O\-C\-K\-E\-T \hyperlink{classapimeal_1_1IConnexion_a219c70ab218a9b3449557238a50e00b8}{get\-Socket} ()=0
+\begin{DoxyCompactList}\small\item\em get the socket \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -88,6 +92,20 @@ get the Request
 \begin{DoxyReturn}{Returns}
 std\-::string const \& \-: Request client 
 \end{DoxyReturn}
+\hypertarget{classapimeal_1_1IConnexion_a219c70ab218a9b3449557238a50e00b8}{\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}!get\-Socket@{get\-Socket}}
+\index{get\-Socket@{get\-Socket}!apimeal::IConnexion@{apimeal\-::\-I\-Connexion}}
+\subsubsection[{get\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\-O\-C\-K\-E\-T apimeal\-::\-I\-Connexion\-::get\-Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IConnexion_a219c70ab218a9b3449557238a50e00b8}
+
+
+get the socket 
+
+\begin{DoxyReturn}{Returns}
+S\-O\-C\-K\-E\-T\-: the socket 
+\end{DoxyReturn}
 \hypertarget{classapimeal_1_1IConnexion_aba7b8303d379e629b59f49621fd6b704}{\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}!set\-Request@{set\-Request}}
 \index{set\-Request@{set\-Request}!apimeal::IConnexion@{apimeal\-::\-I\-Connexion}}
 \subsubsection[{set\-Request}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-I\-Connexion\-::set\-Request (
@@ -102,6 +120,25 @@ set the Request
 
 \begin{DoxyParams}{Parameters}
 {\em std\-::string} & const \& request \-: The request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classapimeal_1_1IConnexion_a795ffdde9790a370c59898549265129e}{\index{apimeal\-::\-I\-Connexion@{apimeal\-::\-I\-Connexion}!set\-Socket@{set\-Socket}}
+\index{set\-Socket@{set\-Socket}!apimeal::IConnexion@{apimeal\-::\-I\-Connexion}}
+\subsubsection[{set\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apimeal\-::\-I\-Connexion\-::set\-Socket (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapimeal_1_1IConnexion_a795ffdde9790a370c59898549265129e}
+
+
+set the socket 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\-O\-C\-K\-E\-T} & \-: The socket \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

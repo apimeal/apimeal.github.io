@@ -11,6 +11,7 @@ var searchData=
   ['getreasonphrase',['getReasonPhrase',['../classapimeal_1_1IHttpResponse.html#a305d866a495d4ca04a5ccefb245457b2',1,'apimeal::IHttpResponse']]],
   ['getrequest',['getRequest',['../classapimeal_1_1IConnexion.html#ae1a0352ab450dea6afd278385747f750',1,'apimeal::IConnexion']]],
   ['getrequesturi',['getRequestURI',['../classapimeal_1_1IHttpRequest.html#adade2c139e4701f2777dd8304c88aa4c',1,'apimeal::IHttpRequest']]],
+  ['getsocket',['getSocket',['../classapimeal_1_1IConnexion.html#a219c70ab218a9b3449557238a50e00b8',1,'apimeal::IConnexion']]],
   ['getstatuscode',['getStatusCode',['../classapimeal_1_1IHttpResponse.html#a66455ecf6c9f5920bff33994eb3f0953',1,'apimeal::IHttpResponse']]],
   ['getversion',['getVersion',['../classapimeal_1_1AModule.html#a7567906eea190833d73f77f1da848b69',1,'apimeal::AModule']]]
 ];
